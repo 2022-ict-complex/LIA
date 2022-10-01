@@ -1,0 +1,9 @@
+conda create -n lia -c nvidia python=3.8 cudatoolkit=11.3
+conda activate lia
+conda install -c nvidia cudnn=8.2
+
+conda update -n base -c defaults conda
+pip install --upgrade pip
+
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio===0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+pip install tensorboard moviepy av tqdm lpips
